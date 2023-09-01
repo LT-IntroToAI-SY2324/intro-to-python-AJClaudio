@@ -5,7 +5,7 @@
 # types
 
 # str
-y = "I love Computer Science!"
+y: str = "I love Computer Science!"
 
 # numbers
 mynum = 47
@@ -98,4 +98,4 @@ age = 25
 # print("Mary is " + age + " years old")
 print(f"Mary is {age} years old")
 
-
+print(y)
