@@ -16,6 +16,11 @@ from typing import List, TypeVar
 
 
 def absolute(n: int) -> int:
+    if n < 0 :
+        return -n
+    else:
+        return n
+    
     """Gives the absolute value of the passed in number. Cannot use the built in
     function `abs`.
 
@@ -25,10 +30,19 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+
+    #raise NotImplementedError("absolute")
 
 
 def factorial(n: int) -> int:
+
+    if n == 0:
+        return 1
+    else:
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
+        return result
     """Takes a number n, and computes the factorial n! You can assume the passed in
     number will be positive
 
@@ -38,7 +52,7 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    ##raise NotImplementedError("factorial")
 
 
 T = TypeVar("T")
@@ -55,7 +69,14 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    twolst = []
+    for i in List:
+        twolst.append(List)
+
+
+    #return List[1::2]
+
+    #raise NotImplementedError("every_other")
 
 
 def sum_list(lst: List[int]) -> int:
@@ -68,7 +89,12 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    ##raise NotImplementedError("sum_list")
+
+    total = 0
+    for num in List:
+        total += num
+    return total
 
 
 def mean(lst: List[int]) -> float:
@@ -80,7 +106,11 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    
+    if not List:
+        return None
+    total = sum(List)
+    return total / len(List)
 
 
 def median(lst: List[int]) -> float:
@@ -95,7 +125,15 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    n = len(List)
+    if n % 2 == 0:
+        mid = n // 2
+        return (List[mid - 1] + List[mid]) / 2
+    else:
+        mid = n // 2
+        return List[mid]
+
+    ##raise NotImplementedError("median")
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
