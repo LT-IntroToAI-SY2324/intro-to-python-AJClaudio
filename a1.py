@@ -139,10 +139,11 @@ def median(lst: List[int]) -> float:
 def duck_duck_goose(lst: List[str]) -> List[str]:
     """Given an list of names (strings), play 'duck duck goose' with it, knocking out
     every third name (wrapping around) until only two names are left.
-
+    
     In other words, when you hit the end of the list, wrap around and keep counting from
     where you were.
 
+    
     For example, if given this list ['Nathan', 'Sasha', 'Sara', 'Jennie'], you'd first
     knock out Sara. Then first 'duck' on Jennie, wrap around to 'duck' on Nathan and
     'goose' on Sasha - knocking him out and leaving only Nathan and Jennie.
@@ -155,7 +156,17 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    
+    #names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
+    
+    while len(lst) > 2:
+        for i in range(0,3):
+            for k in lst:
+                if(i==2):
+                    del k
+    return lst
+    
+    #raise NotImplementedError("duck_duck_goose")
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
